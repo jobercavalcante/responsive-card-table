@@ -1,0 +1,102 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+table.responsive-card {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table.responsive-card caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table.responsive-card tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table.responsive-card th,
+table.responsive-card td {
+  padding: .625em;
+  text-align: center;
+}
+
+table.responsive-card th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 780px) {
+  table.responsive-card {
+    border: 0;
+  }
+
+  table.responsive-card caption {
+    font-size: 1.3em;
+  }
+  
+  table.responsive-card thead.nohead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table.responsive-card tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: .625rem;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 23px 1px rgba(199,199,199,0.5);
+      -moz-box-shadow: 0px 0px 23px 1px rgba(199,199,199,0.5);
+      box-shadow: 0px 0px 23px 1px rgba(199,199,199,0.5);
+  }
+  
+  table.responsive-card td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: justify;
+    padding-left: 30%!important;
+    position: relative;
+    
+  }
+  
+  table.responsive-card td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    position: absolute;   
+    top: 6px;
+		left: 6px;
+    text-align: left;
+    width: 23%;    
+    font-weight: bold;
+    text-transform: uppercase;    
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  table.responsive-card td:last-child {
+    border-bottom: 0;
+  }
+}
