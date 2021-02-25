@@ -54,10 +54,25 @@ table.responsive-card th {
     position: absolute;
     width: 1px;
   }
-
-  table.responsive-card tr {
+  table.responsive-card  thead tr {
     border-bottom: 3px solid #ddd;
-    display: block;
+    display: flex;    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: .625rem;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 23px 1px rgba(199,199,199,0.5);
+      -moz-box-shadow: 0px 0px 23px 1px rgba(199,199,199,0.5);
+      box-shadow: 0px 0px 23px 1px rgba(199,199,199,0.5);
+  }
+
+  table.responsive-card  tbody tr {
+    border-bottom: 3px solid #ddd;
+    display: flex;
+    flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: .625rem;
